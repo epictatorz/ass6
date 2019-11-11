@@ -1,0 +1,4 @@
+Advanced operating system concepts. Topics include one or more of the
+following: distributed systems; real-time operating systems; intelligent
+networks; communications protocols; database process control within a
+client-server framework.

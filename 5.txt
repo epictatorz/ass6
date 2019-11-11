@@ -1,0 +1,4 @@
+Introduction to computer architecture. Investigation of an actual
+computing system: peripherals, CPU configuration and device
+interfaces. Assembly language programming. Interrupt I/O and A/D,
+D/A device programming.

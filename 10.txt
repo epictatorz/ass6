@@ -1,0 +1,7 @@
+Overview of operating systems: history, functionality, design issues.
+Operating system principles: structures, abstractions, and APIs.
+Concurrency: process state, context switches, mutual exclusion, semaphores,
+deadlock. Scheduling: preemption, schedulers, processes and threads.
+Memory management: swapping, paging, segmentation, placement and
+replacement policies. File systems. User interface. Distributed algorithms:
+consensus, termination, fault tolerance.

@@ -1,0 +1,6 @@
+Foundations, history, and main methods of Artificial Intelligence.
+Intelligent search and optimization techniques with a special focus
+on greedy, randomized, and evolutionary algorithms. Neural networks
+as an example of data-based learning approach. Comparison of classical,
+fuzzy, and probabilistic reasoning and knowledge representation
+methodologies.

@@ -1,0 +1,4 @@
+Advanced database systems concepts. Topics include one or more of
+the following: in-depth study of topics covered in CS 375; inclusion
+dependency and semantic data models; object-oriented databases;
+probabilistic databases; Web databases; data mining.

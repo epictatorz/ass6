@@ -1,0 +1,5 @@
+This course introduces data abstraction, data structures, the basics
+of algorithmic analysis, and the fundamental computing algorithms.
+Topics include stacks, queues, recursion, asymptotic notation,
+computational complexity, recursion based sorting, algorithms,
+hashing, and trees.

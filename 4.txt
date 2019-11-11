@@ -1,0 +1,4 @@
+This courses shows how interactive client/server web applications
+are designed and implemented. Appropriate languages for web
+computing will be discussed. Human-computer interfaces, data models,
+and database connectivity will be explored in the context of web computing.

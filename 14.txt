@@ -1,0 +1,5 @@
+Fundamental principles of designing programs and developing large
+software systems that meet specifications and that are safe, secure,
+reliable and dependable. Strategies and techniques of structured
+systems design and development. Prototyping. 4GL. Metrics. Project
+scheduling. Quality control.

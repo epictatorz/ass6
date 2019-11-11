@@ -1,0 +1,5 @@
+Introduction to net-centric computing: network architectures and protocols.
+Communications: transmission fundamentals. Network standards and layers.
+Network security: cryptography, public and private key encryption,
+authentication protocols, digital signatures. Transmission facilities:
+compression, decompression. Error handling. Wide area networks.

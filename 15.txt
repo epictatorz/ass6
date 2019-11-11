@@ -1,0 +1,5 @@
+History and motivation for database systems. Components of database
+systems and their functions. Data modeling to achieve good database
+design. Relational databases and database query languages. Transaction
+processing. Other topics include distributed databases, physical
+database design, and information retrieval systems.

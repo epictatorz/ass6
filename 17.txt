@@ -1,0 +1,4 @@
+High-level programming language specifications. Lexical and syntactics
+structure, regular expression, finite automata and lexical analyser.
+Context-free grammars and parsing. LR parsers. Symbol tables. Storage
+allocation. Code optimization and generation.

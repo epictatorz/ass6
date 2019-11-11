@@ -1,0 +1,4 @@
+Discussion of the means in which the computer can be used to visually
+enhance understanding of different kinds of information. Issues include
+representations of objects, methods for viewing and the use of graphics
+tools to understand complex numerical data.

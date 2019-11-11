@@ -1,0 +1,8 @@
+This course stresses the importance of good interfaces and the
+relationship of user interface design to human-computer interaction.
+Other topics include: interface quality and methods of evaluation;
+interface design examples; dimensions of interface variability;
+dialogue genre; dialogue tools and techniques; user-centered design
+and task analysis; prototyping and the iterative design cycle; user
+interface implementation; prototyping tools and environments; I/O
+devices; basic computer graphics; color and sound.

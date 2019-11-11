@@ -1,0 +1,7 @@
+Design, implementation, and manipulation of complex abstract data types,
+including trees and graphs. Fundamental algorithms: advanced sorting,
+depth- and breadth-first traversals, string manipulation, pattern matching,
+and graph algorithms. Algorithmic strategies: brute-force, greedy,
+divide-and-conquer, backtracking, branch-and-bound, dynamic programming,
+randomized, parallel, and distributed. Introduction to algorithm analysis
+and complexity theory.

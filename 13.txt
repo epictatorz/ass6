@@ -1,0 +1,5 @@
+Programming language genealogy and design. Imperative, functional, logic,
+object-oriented, and 4GL language paradigms. Data/control structures,
+exception handling, I/O, program verification, data abstraction,
+information hiding, concurrency and non-determinism. Metalanguages,
+parsing and pattern matching.
