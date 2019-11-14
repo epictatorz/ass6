@@ -24,6 +24,7 @@ public:
 
 class Tree {
 public:
+
 	Tree();
 	bool IsPSet();
 	iType Read();
@@ -35,13 +36,16 @@ public:
 	void FindMax(AVLNode*&);
 	void InsertHelper(iType);
 	void Insert(iType, AVLNode*&);
+	int Height(AVLNode*&);
+
+private:
+
+	AVLNode* p;
+	AVLNode* root;
+
 	void LL(AVLNode*&);
 	void RR(AVLNode*&);
 	void LR(AVLNode*&);
 	void RL(AVLNode*&);
-	int Height(AVLNode*&);
-private:
-	AVLNode* p;
-	AVLNode* root;
 };
 #endif

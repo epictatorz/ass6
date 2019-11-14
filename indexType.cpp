@@ -95,7 +95,7 @@ void Tree::Insert(iType x, AVLNode*& q) {
 	else if (x.word > q->val.word) {
 		Insert(x, q->right);
 		if (p != NULL) {
-			if (Height(q->right) - Height(q->right) == 2) {
+			if (Height(q->right) - Height(q->left) == 2) {
 				if (x.word > q->right->val.word) {
 					RR(q);
 				}
