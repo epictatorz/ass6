@@ -111,6 +111,7 @@ void searchMenu() {
 	system("cls");
 	bool phrase;
 	string tempString;
+	getline(cin, tempString);
 	while (1) {
 		phrase = false;
 		cout << "Enter -1 to exit search." << endl;
