@@ -99,13 +99,6 @@ void menu() {
 
 }
 
-void printWithoutOccurences()
-{
-
-
-
-}
-
 void searchMenu() {
 	system("cls");
 	bool phrase;
