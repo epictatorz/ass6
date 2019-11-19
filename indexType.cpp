@@ -160,6 +160,8 @@ void Tree::printOccurencesHelper(AVLNode*& p, int level)
 	{
 		printOccurencesHelper(p->right, level + 1);
 
+		p->val.occurences.ResetP();
+
 		cout << endl << p->val.word;
 		
 		for (int i = 0; i < p->val.occurences.Length(); i++)
