@@ -1,4 +1,6 @@
 #include "indexType.h"
+#include <iostream>
+using namespace std;
 
 int Max(int a, int b) {
 	if (a < b) { return b; }
@@ -106,7 +108,7 @@ void Tree::Insert(iType x, AVLNode*& q) {
 		}
 	}
 	//if word is equal adds occurence to current record
-	else if (x.word == q->val.word){
+	else if (x.word == q->val.word) {
 		q->val.occurences.Insert(x.occurences.Read());
 		p = q;
 	}
@@ -148,4 +150,13 @@ int Tree::Height(AVLNode*& q) {
 		return -1;
 	}
 	return q->height;
+}
+
+void Tree::printOccurencesHelper() {
+	printOccurences(root, 1);
+}
+
+void Tree::printOccurences(AVLNode*& q, int level) {
+	cout << q->val.word << endl;
+	
 }

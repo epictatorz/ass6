@@ -5,6 +5,7 @@
 #include <iostream>
 #include "occurenceType.h"
 #include "indexType.h"
+#include "occurenceType.h"
 using namespace std;
 
 #ifndef main_h
@@ -17,7 +18,6 @@ string getFileName(int);
 void readFile(string, int);
 void menu();
 void printWithOccurences();
-void printWithoutOccurences();
 void searchMenu();
 void searchWord(string);
 void searchPhrase(string);

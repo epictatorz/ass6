@@ -83,7 +83,7 @@ void menu() {
 			//printWithOccurences();
 			break;
 		case '2':
-			//printWithoutOccurences();
+			index.printOccurencesHelper();
 			break;
 		case '3':
 			searchMenu();
@@ -99,10 +99,6 @@ void menu() {
 
 }
 
-void printWithOccurences() {
-
-}
-
 void printWithoutOccurences() {
 
 }
@@ -114,6 +110,7 @@ void searchMenu() {
 	getline(cin, tempString);
 	while (1) {
 		phrase = false;
+		//getline(cin, tempString);
 		cout << "Enter -1 to exit search." << endl;
 		cout << "Enter word/phrase to search:";
 		getline(cin,tempString);
@@ -149,10 +146,11 @@ void searchWord(string word) {
 
 void searchPhrase(string phrase) {
 	string word[10];
+	bool hmm = true;
 	string tempWord = "";
 	int i = 0;
 	for (auto x : phrase){
-		if (x == ' '){
+		if (x == ' ' || x == '/n'){
 			word[i] = tempWord;
 			tempWord = "";
 			i++;
@@ -161,26 +159,86 @@ void searchPhrase(string phrase) {
 			tempWord = tempWord + x;
 		}
 	}
-	const int size = i;
 	word[i] = tempWord;
-
+	
 	int j = 0;
+	int x = 0;
+	int a = 0;
+	iType iTypeTemp[10];
+
+	//grabs all the words in the phrase
 	while (j <= i) {
-		iType iTypeTemp;
-		oType oTypeTemp;
-		int positions[10];
-		iTypeTemp.word = word[j];
-		index.FindHelper(iTypeTemp);
-		iTypeTemp = index.Read();
-		oTypeTemp = iTypeTemp.occurences.Read();
-		positions[j] = oTypeTemp.position;
-		
-		if (j > 0) {
-			if (positions[j - 1] != positions[j] - 1) {
-				cout << "The search does not exist in the index." << endl;
-				return;
-			}
+		iTypeTemp[j].word = word[j];
+		index.FindHelper(iTypeTemp[j]);
+		if (index.IsPSet() == true) {
+			iTypeTemp[j] = index.Read();
+			iTypeTemp[j].occurences.ResetP();
 		}
 		j++;
+	}
+	int page, position;
+	while (iTypeTemp[0].occurences.Read().page != iTypeTemp[1].occurences.Read().page) {
+		if (iTypeTemp[0].occurences.Read().page != iTypeTemp[1].occurences.Read().page) {
+			iTypeTemp[0].occurences.Iterate();
+		}
+	}
+	page = iTypeTemp[0].occurences.Read().page;
+	int count = 0;
+	while (1) {
+		if (count > 200) {
+			hmm = false;
+			break;
+		}
+		if (iTypeTemp[0].occurences.Read().position == iTypeTemp[1].occurences.Read().position - 1) {
+			position = iTypeTemp[0].occurences.Read().position;
+			break;
+		}
+		else if (iTypeTemp[0].occurences.Read().position > iTypeTemp[1].occurences.Read().position - 1) {
+			iTypeTemp[1].occurences.Iterate();
+		}
+		else if (iTypeTemp[0].occurences.Read().position < iTypeTemp[1].occurences.Read().position - 1) {
+			iTypeTemp[0].occurences.Iterate();
+		}
+		count++;
+	}
+	for (int a = 2; a <= i; a++) {
+		count = 0;
+		while (1) {
+			if (count > 30) {
+				hmm = false;
+				break;
+			}
+			if (position == iTypeTemp[a].occurences.Read().position - a) {
+				break;
+			}
+			if (count > 1 && position != iTypeTemp[a].occurences.Read().position - a) {
+				iTypeTemp[a].occurences.Iterate();
+			}
+			count++;
+		}
+	}
+	
+
+	if (hmm == true) {
+		a = 0;
+		while (a < i) {
+			cout << word[a] << ' ';
+			a++;
+		}
+		cout << word[i] << " exists at " << endl;
+		a = 0;
+		while (a <= i) {
+			cout << "<" << page << ", " << (position + a) << "> ";
+			a++;
+		}
+		cout << endl << endl;
+	}
+	else {
+		a = 0;
+		while (a < i) {
+			cout << word[a] << ' ';
+			a++;
+		}
+		cout << word[i] << " does not exist in the index." << endl << endl;
 	}
 }

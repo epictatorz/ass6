@@ -10,6 +10,7 @@ using namespace std;
 int Max(int, int);
 
 struct iType {
+
 	string word;
 	occurence occurences;
 };
@@ -37,6 +38,9 @@ public:
 	void InsertHelper(iType);
 	void Insert(iType, AVLNode*&);
 	int Height(AVLNode*&);
+
+	void printOccurences(AVLNode*&, int);
+	void printOccurencesHelper();
 
 private:
 

@@ -8,6 +8,9 @@ occurence::occurence() {
 
 oType occurence::Read() {
 	//reads the current value
+	if (p == -1) {
+		p = 0;
+	}
 	return a[p];
 }
 
