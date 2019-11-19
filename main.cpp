@@ -101,6 +101,8 @@ void menu() {
 
 void printWithoutOccurences() {
 
+	
+
 }
 
 void searchMenu() {
