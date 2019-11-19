@@ -152,11 +152,74 @@ int Tree::Height(AVLNode*& q) {
 	return q->height;
 }
 
-void Tree::printOccurencesHelper() {
-	printOccurences(root, 1);
+void Tree::printOccurencesHelper(AVLNode*& p, int level)
+{
+	oType tmp;
+
+	if (p != 0)
+	{
+		printOccurencesHelper(p->right, level + 1);
+
+		cout << endl << p->val.word;
+		
+		for (int i = 0; i < p->val.occurences.Length(); i++)
+		{
+			tmp = p->val.occurences.Read();
+
+			cout << " [" << tmp.page << ", " << tmp.position << "] ";
+
+			p->val.occurences.Iterate();
+		}
+		printOccurencesHelper(p->left, level + 1);
+	}
 }
 
-void Tree::printOccurences(AVLNode*& q, int level) {
-	cout << q->val.word << endl;
-	
+void Tree::printOccurences()
+{
+    if (root == 0)
+       cout << "Empty tree" << endl;
+    else
+    {
+       cout << endl;
+       printOccurencesHelper(root,1);
+       cout << endl;
+    }
+}
+
+void Tree::printWithoutOccurencesHelper(AVLNode*& p, int level)
+{
+	int cnt;
+
+	if (p != 0)
+	{
+		printWithoutOccurencesHelper(p->right, level + 1);
+
+		for (cnt = 0; cnt < level; cnt++)
+			cout << "\t \t";
+
+		cout << " " << p->val.word;
+		
+        if ( ( p->left != 0 ) &&
+             ( p->right != 0 ) )
+           cout << "<";
+        else if ( p->right != 0 )
+           cout << "/";
+        else if ( p->left != 0 )
+           cout << "\\";
+        cout << endl;
+		
+		printWithoutOccurencesHelper(p->left, level + 1);
+	}
+}
+
+void Tree::printWithoutOccurences()
+{
+    if (root == 0)
+       cout << "Empty tree" << endl;
+    else
+    {
+       cout << endl;
+       printWithoutOccurencesHelper(root,1);
+       cout << endl;
+    }
 }

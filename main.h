@@ -17,7 +17,7 @@ void createIndex();
 string getFileName(int);
 void readFile(string, int);
 void menu();
-void printWithOccurences();
+
 void searchMenu();
 void searchWord(string);
 void searchPhrase(string);

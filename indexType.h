@@ -39,8 +39,11 @@ public:
 	void Insert(iType, AVLNode*&);
 	int Height(AVLNode*&);
 
-	void printOccurences(AVLNode*&, int);
-	void printOccurencesHelper();
+	void printOccurences();
+	void printOccurencesHelper(AVLNode*&, int);
+
+	void printWithoutOccurences();
+	void printWithoutOccurencesHelper(AVLNode*&, int);
 
 private:
 

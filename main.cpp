@@ -80,10 +80,10 @@ void menu() {
 		cin >> choice;
 		switch (choice) {
 		case '1':
-			//printWithOccurences();
+			index.printWithoutOccurences();
 			break;
 		case '2':
-			index.printOccurencesHelper();
+			index.printOccurences();
 			break;
 		case '3':
 			searchMenu();
@@ -99,9 +99,10 @@ void menu() {
 
 }
 
-void printWithoutOccurences() {
+void printWithoutOccurences()
+{
 
-	
+
 
 }
 
